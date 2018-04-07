@@ -1,6 +1,6 @@
 "use strict";
 
-const lookup = require("./lookup.js");
+const callingCode = require("./calling-code.js");
 
 module.exports.lookup = (event, context, callback) => {
   let statusCode = 200;
@@ -22,15 +22,26 @@ module.exports.lookup = (event, context, callback) => {
   }
 
   if (inputNumber !== undefined) {
-    body = lookup(inputNumber);
+    body = callingCode.lookup(inputNumber);
   } else {
     statusCode = 400;
-    body = {error: "Number is required!"};
+    body = { error: "Number is required!" };
   }
 
   const response = {
     statusCode: statusCode,
     body: JSON.stringify(body)
+  };
+
+  callback(null, response);
+};
+
+module.exports.list = (event, context, callback) => {
+  console.log(`Received event: ${JSON.stringify(event, null, 2)}`);
+
+  const response = {
+    statusCode: 200,
+    body: JSON.stringify(callingCode.list())
   };
 
   callback(null, response);

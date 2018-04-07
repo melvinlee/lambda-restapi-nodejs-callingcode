@@ -1,6 +1,6 @@
-const countrycodes = require('./countrycode-data.js');
+const countrycodes = require('./calling-code-data.js');
 
-module.exports = (number) => {
+module.exports.lookup = (number) => {
     let sortcallingCodeDesc =  countrycodes().sort((a,b) => b.callingCode.length - a.callingCode.length);
     let found = [];
     let cleanNumber = number.replace("+","").replace(" ","");
@@ -16,4 +16,8 @@ module.exports = (number) => {
 
     let {name, callingCode} = found;
     return {callingNumber: number, country: name, code: callingCode};
+}
+
+module.exports.list = () => {
+    return countrycodes();
 }
