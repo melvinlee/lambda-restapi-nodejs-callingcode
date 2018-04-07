@@ -9,14 +9,14 @@ provider:
   region: ap-southeast-1
 
 functions:
-  lookup:
+  callingcodeLookup:
     name: ${opt:stage, 'dev'}-callingcode-lookup
     handler: handler.lookup
     events:
       - http:
          method: get
          path: callingcode/lookup
-  list:
+  callingcodeList:
     name: ${opt:stage, 'dev'}-callingcode-list
     handler: handler.list
     events:
