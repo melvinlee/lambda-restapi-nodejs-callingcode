@@ -1,0 +1,18 @@
+service: callingcode-lambda
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+# you can overwrite defaults here
+  stage: ${opt:stage, 'dev'}  
+  region: ap-southeast-1
+
+functions:
+  lookup:
+    name: ${opt:stage, 'dev'}-callingcode-lookup
+    handler: handler.lookup
+    events:
+      - http:
+         method: get
+         path: callingcode/lookup
