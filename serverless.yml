@@ -1,4 +1,4 @@
-service: callingcode-lambda
+service: callingcode-restapi-lambda
 
 provider:
   name: aws
@@ -9,16 +9,14 @@ provider:
   region: ap-southeast-1
 
 functions:
-  callingcodeLookup:
-    name: ${opt:stage, 'dev'}-callingcode-lookup
-    handler: handler.lookup
+  lookup-Get:
+    handler: src/lookup.lookup
     events:
       - http:
          method: get
          path: callingcode/lookup
-  callingcodeList:
-    name: ${opt:stage, 'dev'}-callingcode-list
-    handler: handler.list
+  list-Get:
+    handler: src/list.list
     events:
       - http:
           method: get
