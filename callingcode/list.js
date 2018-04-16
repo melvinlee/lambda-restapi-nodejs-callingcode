@@ -1,4 +1,4 @@
-const countrycodes = require('./codetable.js');
+const countrycodes = require("./codetable.js");
 
 module.exports.list = (event, context, callback) => {
   console.log(`Received event: ${JSON.stringify(event, null, 2)}`);
