@@ -9,14 +9,14 @@ provider:
   region: ap-southeast-1
 
 functions:
-  lookup-Get:
-    handler: src/lookup.lookup
+  lookup:
+    handler: callingcode/lookup.lookup
     events:
       - http:
          method: get
          path: callingcode/lookup
-  list-Get:
-    handler: src/list.list
+  list:
+    handler: callingcode/list.list
     events:
       - http:
           method: get
