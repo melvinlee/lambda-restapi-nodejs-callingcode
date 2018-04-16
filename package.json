@@ -1,0 +1,26 @@
+{
+  "name": "aws-lambda-restapi-callingcode",
+  "version": "1.0.0",
+  "description": "This API help you find the dialing codes you need to make long distance.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melvinlee/aws-lambda-restapi-callingcode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melvinlee/aws-lambda-restapi-callingcode/issues"
+  },
+  "homepage": "https://github.com/melvinlee/aws-lambda-restapi-callingcode#readme"
+}
