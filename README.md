@@ -1,5 +1,7 @@
 # REST API Callingcode
 
+This API help you find the dialing codes you need to make long distance. 
+
 ## Usage
 
 - `GET /callingcode/lookup?number={callingnumber}` - Lookup country detail by speficing calling number
