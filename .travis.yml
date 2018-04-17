@@ -21,7 +21,8 @@ install:
 
 before_script:
   - echo Start Serverless offline mode...
-  - travis_wait serverless offline start & # run offline mode in background
+  - serverless offline start > /dev/null &  # run offline mode in background
+  - sleep 10
 
 script:
   - echo Running test...
