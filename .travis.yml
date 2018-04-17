@@ -4,7 +4,7 @@ node_js:
   - "8"
 
 env:
-  - TEST_HOST=localhost:3000
+  - TEST_HOST=http://localhost:3000
 
 cache:
   directories:
@@ -21,9 +21,8 @@ install:
 
 before_script:
   - echo Start Serverless offline mode...
-  - serverless offline start & # run offline mode in background
+  - travis_wait serverless offline start & # run offline mode in background
 
 script:
   - echo Running test...
-  - echo "Using test host: $TEST_HOST"
   - npm test
