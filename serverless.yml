@@ -3,10 +3,11 @@ service: callingcode-restapi-lambda
 provider:
   name: aws
   runtime: nodejs8.10
-
-# you can overwrite defaults here
   stage: ${opt:stage, 'dev'}  
   region: ap-southeast-1
+
+plugins:
+  - serverless-offline
 
 functions:
   lookup:

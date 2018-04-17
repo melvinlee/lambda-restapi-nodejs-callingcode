@@ -1,7 +1,7 @@
 {
   "name": "aws-lambda-restapi-callingcode",
   "version": "1.0.0",
-  "description": "This API help you find the dialing codes you need to make long distance.",
+  "description": "This API help you find the dialing codes you need to make long distance call.",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -11,9 +11,11 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "mocha": "^5.1.0",
-    "prettier": "^1.12.0"
+    "prettier": "^1.12.0",
+    "serverless-offline": "^3.20.2"
   },
   "scripts": {
+    "start": "serverless offline start",
     "test": "mocha --timeout 10000"
   },
   "repository": {
