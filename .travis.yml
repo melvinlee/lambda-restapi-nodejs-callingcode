@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - "8"
 
-  env:
+env:
   - TEST_HOST=localhost:3000
 
 cache:
