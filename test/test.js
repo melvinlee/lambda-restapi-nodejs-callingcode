@@ -61,9 +61,7 @@ describe("CallingCode", () => {
           done();
         });
     });
-  });
 
-  describe("GET /callingcode/{id}", () => {
     it("it should NOT return country when code is NOT found", done => {
       chai
         .request(host)
