@@ -1,9 +1,13 @@
 const codeTable = require("./codetable.js");
 
 const findByCode = inputCode => {
-  return codeTable().filter(function extractByCode(x) {
-    return x.callingCode == inputCode;
-  });
+  return codeTable()
+    .filter(function extractByCode(x) {
+      return x.callingCode == inputCode;
+    })
+    .sort(function orderByNameAsc(a, b) {
+      return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+    });
 };
 
 module.exports.get = (event, context, callback) => {
