@@ -25,5 +25,5 @@ before_script:
 
 script:
   - echo Running test...
-  - echo Using test host: $TEST_HOST
+  - echo "Using test host: $TEST_HOST"
   - npm test
