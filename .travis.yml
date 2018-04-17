@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - "8"
+
+  env:
+  - TEST_HOST=localhost:3000
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - echo Installing Serverless...
+  - npm install -g serverless@1.26.1
+  - if ! serverless --version ; then exit 1; fi
+  - serverless --version
+  - echo Installing source NPM dependencies...
+  - npm install
+
+before_script:
+  - echo Start Serverless offline mode...
+  - serverless offline start & # run offline mode in background
+
+script:
+  - echo Running test...
+  - echo Using test host: $TEST_HOST
+  - npm test
