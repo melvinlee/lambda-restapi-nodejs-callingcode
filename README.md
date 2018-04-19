@@ -1,6 +1,6 @@
-# REST API Callingcode [![Build Status](https://travis-ci.org/melvinlee/aws-lambda-restapi-callingcode.svg?branch=master)](https://travis-ci.org/melvinlee/aws-lambda-restapi-callingcode)
+# REST API Callingcode [![Build Status](https://travis-ci.org/melvinlee/lambda-restapi-nodejs-callingcode.svg?branch=master)](https://travis-ci.org/melvinlee/lambda-restapi-nodejs-callingcode)
 
-This API help you find the dialing codes you need to make long distance. 
+This API help you find the dialing codes you need to make long distance call. 
 
 ## Usage
 
