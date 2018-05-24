@@ -15,6 +15,6 @@ install:
 
 before_script:
   - ./build.sh offlinestart
-
+  
 script:
   - ./build.sh test
