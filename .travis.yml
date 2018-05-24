@@ -11,19 +11,10 @@ cache:
     - node_modules
 
 install:
-  - echo Installing source NPM dependencies...
-  - npm install
-  - echo
-  - echo Installing Serverless...
-  - npm install -g serverless@1.26.1
-  - if ! serverless --version ; then exit 1; fi
-  - serverless --version
+  - ./build install
 
 before_script:
-  - echo Start Serverless offline mode...
-  - serverless offline start > /dev/null &  # run offline mode in background
-  - sleep 10
+  - ./build offlinestart
 
 script:
-  - echo Running test...
-  - npm test
+  - ./build test
