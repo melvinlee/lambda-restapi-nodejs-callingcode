@@ -5,8 +5,8 @@ This API help you find the dialing codes you need to make long distance call.
 ## Usage
 
 - `GET /callingcode/lookup?number={callingnumber}` - Lookup country detail by speficing calling number
-- `GET /callingcode` - List country calling number details
-- `GET /callingcode/{code}` - Get Country detail by speficif calling code 
+- `GET /callingcode` - List country details
+- `GET /callingcode/{countrycode}` - Get Country detail by specific country code 
 
 ## Quickstart
 
