@@ -12,12 +12,13 @@ cache:
 
 before_install:
   - chmod +x build.sh
-  
+
 install:
   - ./build.sh install
 
 before_script:
   - ./build.sh offlinestart
+  - sleep 10
 
 script:
   - ./build.sh test
