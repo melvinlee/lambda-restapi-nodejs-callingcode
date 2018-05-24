@@ -11,10 +11,10 @@ cache:
     - node_modules
 
 install:
-  - ./build install
+  - ./build.sh install
 
 before_script:
-  - ./build offlinestart
+  - ./build.sh offlinestart
 
 script:
-  - ./build test
+  - ./build.sh test
