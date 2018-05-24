@@ -17,15 +17,5 @@
   "scripts": {
     "start": "serverless offline start",
     "test": "mocha --timeout 10000"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/melvinlee/aws-lambda-restapi-callingcode.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/melvinlee/aws-lambda-restapi-callingcode/issues"
-  },
-  "homepage": "https://github.com/melvinlee/aws-lambda-restapi-callingcode#readme"
+  }
 }
