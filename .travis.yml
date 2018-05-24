@@ -10,11 +10,14 @@ cache:
   directories:
     - node_modules
 
+before_install:
+  - chmod +x build.sh
+  
 install:
   - ./build.sh install
 
 before_script:
   - ./build.sh offlinestart
-  
+
 script:
   - ./build.sh test
